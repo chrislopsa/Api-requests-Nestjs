@@ -8,6 +8,7 @@ export class FindAll {
     constructor(
         @InjectRepository(Request) private requestRepository: Repository<Request>
     ){};
+    
     async getAllRequest(): Promise<Request[]>{
         const request = await this.requestRepository.find();
         return request

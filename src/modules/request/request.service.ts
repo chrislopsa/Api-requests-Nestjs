@@ -1,6 +1,7 @@
 import { Injectable } from '@nestjs/common';
 import { CreateRequestDto } from './dto/create-request.dto';
 import { Create, FindAll, FindId, Update } from './services';
+import { Request } from './entities/request.entity';
 
 @Injectable()
 export class RequestService {
@@ -13,6 +14,10 @@ export class RequestService {
 
  async create(createRequestDto: CreateRequestDto): Promise<Request>{
    return //this.createRequest.create(createRequestDto)
+ }
+
+ async getRequest(): Promise<Request[]>{
+   return this.findAll.getAllRequest()
  }
 
 }

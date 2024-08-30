@@ -1,1 +1,3 @@
-export class Update {}
+export class Update {
+    
+}

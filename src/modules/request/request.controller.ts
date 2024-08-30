@@ -12,5 +12,9 @@ export class RequestController {
     return this.requestService.create(createRequestDto);
   }
 
+  @Get()
+  findAll() {
+    return this.requestService.getRequest();
+  }
  
 }

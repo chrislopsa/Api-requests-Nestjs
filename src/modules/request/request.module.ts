@@ -6,7 +6,7 @@ import { Request } from './entities/request.entity';
 import { Create, FindAll, FindId, Update } from './services';
 
 @Module({
-  imports:[TypeOrmModule.forFeature([Request])],
+  imports: [TypeOrmModule.forFeature([Request])],
   controllers: [RequestController],
   providers: [RequestService, Create, FindAll, FindId, Update],
 })

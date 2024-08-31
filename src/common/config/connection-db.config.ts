@@ -6,7 +6,7 @@ import { EnvConfig } from './env.config';
 export class DatabaseConfigService implements TypeOrmOptionsFactory {
     createTypeOrmOptions(): TypeOrmModuleOptions {
         const envConfig = EnvConfig();
-        // console.log(envConfig) //para verificar que las variables se estan carganado correctamente
+         //console.log(envConfig) //para verificar que las variables se estan carganado correctamente
         return {
             type: 'mysql',
             host: envConfig.host,

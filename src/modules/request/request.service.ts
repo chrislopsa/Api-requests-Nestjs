@@ -12,8 +12,8 @@ export class RequestService {
   private readonly update: Update
  ){}
 
- async create(createRequestDto: CreateRequestDto): Promise<Request>{
-   return //this.createRequest.create(createRequestDto)
+ async create(type: string, state: number, createRequestDto: CreateRequestDto): Promise<Request>{
+   return this.createRequest.create(type, state, createRequestDto)
  }
 
  async getRequest(): Promise<Request[]>{

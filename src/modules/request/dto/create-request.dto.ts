@@ -20,7 +20,8 @@ export class CreateRequestDto {
     @IsNotEmpty({ message: 'id_owner is required' })
     @IsNumber({}, { message: 'Id is a number' })
     id_owner: number;
-
+    
+    //role that the user has at the time the request was created
     @IsNotEmpty({ message: 'id_role is required' })
     @IsNumber({}, { message: 'Id is a number' })
     id_role: number
@@ -29,4 +30,7 @@ export class CreateRequestDto {
     @IsNumber({}, { message: 'Id is a number' })
     date: string
 
+    @IsNotEmpty({ message: 'hour is required' })
+    @IsNumber({}, { message: 'Id is a number' })
+    proposed_time: string
 }

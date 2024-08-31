@@ -32,8 +32,8 @@ export class Request {
   @Column('date')
   date: Date;
 
-  @Column('date')
-  proposed_time: Date;
+  @Column('varchar')
+  proposed_time: string;
 
   @CreateDateColumn({
     type: 'timestamp',

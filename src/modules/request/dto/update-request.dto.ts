@@ -1,4 +1,8 @@
-import { PartialType } from '@nestjs/mapped-types';
-import { CreateRequestDto } from './create-request.dto';
+import { IsDateString, IsNotEmpty, IsNumber, IsString } from 'class-validator';
 
-export class UpdateRequestDto extends PartialType(CreateRequestDto) {}
+export class UpdateRequestDto  {
+
+  @IsNotEmpty({ message: 'date is required' })
+  @IsString()
+  date: string;
+}

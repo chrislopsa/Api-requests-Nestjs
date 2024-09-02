@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateRequestDto } from './dto/create-request.dto';
 import { Create, FindAll, FindId, Update } from './services';
 import { Request } from './entities/request.entity';
+import { UpdateRequestDto } from './dto/update-request.dto';
 
 @Injectable()
 export class RequestService {
@@ -19,5 +20,8 @@ export class RequestService {
  async getRequest(): Promise<Request[]>{
    return this.findAll.getAllRequest()
  }
-
+async Update(id:number, updateRequestDto: UpdateRequestDto): Promise<void>{
+   return this.update.updateAndNewRequest(id, updateRequestDto)
+ 
+}
 }
